@@ -1,1 +1,44 @@
-Empty README!!  Add setup info and usage example.  The content in this file is automatically rendered to your project's front-page.
+This is a set of plugins for the ExtJS HtmlEditor that add more advanced HTML editing capabilities. Learn more about these plugins on my blog post about them.
+
+Currently, these are the plugins that have been created for this set:
+
+    * WordPaste
+    * Divider
+    * Table
+    * HR
+    * IndentOutdent
+    * SubSuperScript?
+    * RemoveFormat?
+    * MidasCommand?
+    * SpecialCharacters 
+
+Example Usage
+
+{
+        xtype: 'htmleditor',
+        ...,
+        plugins: [
+                new Ext.ux.form.HtmlEditor.Word(),  
+                new Ext.ux.form.HtmlEditor.Divider(),  
+                new Ext.ux.form.HtmlEditor.Table(),  
+                new Ext.ux.form.HtmlEditor.HR(),  
+                new Ext.ux.form.HtmlEditor.IndentOutdent(),  
+                new Ext.ux.form.HtmlEditor.SubSuperScript(),  
+                new Ext.ux.form.HtmlEditor.RemoveFormat() 
+        ],
+        ...
+}
+
+Button Icons
+
+The icons used for each of the buttons is not provided as part of this plugin, they must be acquired separately. An example of the CSS needed for each buttons icon is provided in the styles.css file located in the src folder. Here is an example style for the table button icon.
+
+.x-edit-table {background: url(../images/table.png) 0 0 no-repeat !important;}
+
+The style name is generated from the midas command name which can be found in the cmd property of the plugin. In the case of non midas commands, the onRender handler of the plugin has a reference to the iconCls name used.
+
+For nice icon sets, check out the following sites.
+
+    * http://www.famfamfam.com/
+    * http://code.google.com/p/fugue-icons/
+    * http://www.everaldo.com/crystal/ 
