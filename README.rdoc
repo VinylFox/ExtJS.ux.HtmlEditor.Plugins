@@ -41,6 +41,6 @@ The style name is generated from the midas command name which can be found in th
 
 For nice icon sets, check out the following sites.
 
-* http://www.famfamfam.com/
-* http://code.google.com/p/fugue-icons/
-* http://www.everaldo.com/crystal/ 
+* http://www.famfamfam.com
+* http://code.google.com/p/fugue-icons
+* http://www.everaldo.com/crystal 
