@@ -2,19 +2,19 @@ This is a set of plugins for the ExtJS HtmlEditor that add more advanced HTML ed
 
 Currently, these are the plugins that have been created for this set:
 
-    * WordPaste
-    * Divider
-    * Table
-    * HR
-    * IndentOutdent
-    * SubSuperScript
-    * RemoveFormat
-    * MidasCommand
-    * SpecialCharacters 
+* WordPaste
+* Divider
+* Table
+* HR
+* IndentOutdent
+* SubSuperScript
+* RemoveFormat
+* MidasCommand
+* SpecialCharacters 
 
 == Example Usage
 
-<tt>{
+	{
         xtype: 'htmleditor',
         ...,
         plugins: [
@@ -27,18 +27,18 @@ Currently, these are the plugins that have been created for this set:
                 new Ext.ux.form.HtmlEditor.RemoveFormat() 
         ],
         ...
-}</tt>
+	}
 
 == Button Icons
 
 The icons used for each of the buttons is not provided as part of this plugin, they must be acquired separately. An example of the CSS needed for each buttons icon is provided in the styles.css file located in the src folder. Here is an example style for the table button icon.
 
-<tt>.x-edit-table {background: url(../images/table.png) 0 0 no-repeat !important;}</tt>
+	.x-edit-table {background: url(../images/table.png) 0 0 no-repeat !important;}
 
 The style name is generated from the midas command name which can be found in the cmd property of the plugin. In the case of non midas commands, the onRender handler of the plugin has a reference to the iconCls name used.
 
 = For nice icon sets, check out the following sites.
 
-    * http://www.famfamfam.com/
-    * http://code.google.com/p/fugue-icons/
-    * http://www.everaldo.com/crystal/ 
+* http://www.famfamfam.com/
+* http://code.google.com/p/fugue-icons/
+* http://www.everaldo.com/crystal/ 
