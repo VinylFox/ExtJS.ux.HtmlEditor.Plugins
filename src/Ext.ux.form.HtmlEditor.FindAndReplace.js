@@ -3,9 +3,15 @@
  * @contributor Ronald van Raaphorst - Twensoc
  * @class Ext.ux.form.HtmlEditor.FindReplace
  * @extends Ext.util.Observable
- * <p>A plugin that provides search and replace functionality in source edit mode.</p>
+ * <p>A plugin that provides search and replace functionality in source edit mode. Incomplete.</p>
  */
 Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
+	// Find and Replace language text
+	langTitle: 'Find/Replace',
+	langFind: 'Find',
+	langReplace: 'Replace',
+	langReplaceWith: 'Replace with',
+	langClose: 'Close',
     // private
     cmd: 'findandreplace',
     // private
@@ -33,7 +39,7 @@ Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
                 if (!this.farWindow){
                 
                     this.farWindow = new Ext.Window({
-                        title: 'Find/Replace',
+                        title: this.langTitle,
                         closeAction: 'hide',
                         items: [{
                             itemId: 'findandreplace',
@@ -46,27 +52,27 @@ Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
                             items: [{
                                 xtype: 'textfield',
                                 allowBlank: false,
-                                fieldLabel: 'Find',
+                                fieldLabel: this.langFind,
                                 name: 'find',
                                 width: 150
                             }, {
                                 xtype: 'textfield',
                                 allowBlank: true,
-                                fieldLabel: 'Replace with',
+                                fieldLabel: this.langReplaceWith,
                                 name: 'replace',
                                 width: 150
                             }]
                         }],
                         buttons: [{
-                            text: 'Find',
+                            text: this.langFind,
                             handler: this.doFind,
                             scope: this
                         }, {
-                            text: 'Replace',
+                            text: this.langReplace,
                             handler: this.doReplace,
                             scope: this
                         }, {
-                            text: 'Close',
+                            text: this.langClose,
                             handler: function(){
                                 this.farWindow.hide();
                             },
@@ -85,9 +91,9 @@ Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
             },
             scope: this,
             tooltip: {
-                title: 'Find/Replace'
+                title: this.langTitle
             },
-            overflowText: 'Find/Replace'
+            overflowText: this.langTitle
         });
         
     },

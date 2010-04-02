@@ -14,6 +14,8 @@
  * </pre>
  */
 Ext.ux.form.HtmlEditor.Image = Ext.extend(Ext.util.Observable, {
+	// Image language text
+	langTitle: 'Insert Image',
     urlSizeVars: ['width','height'],
     basePath: 'image.php',
     init: function(cmp){
@@ -43,9 +45,9 @@ Ext.ux.form.HtmlEditor.Image = Ext.extend(Ext.util.Observable, {
             handler: this.selectImage,
             scope: this,
             tooltip: {
-                title: 'Insert Image'
+                title: this.langTitle
             },
-            overflowText: 'Insert Image'
+            overflowText: this.langTitle
         });
     },
     selectImage: Ext.emptyFn,
