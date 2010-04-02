@@ -54,7 +54,7 @@ Ext.ux.form.HtmlEditor.SpecialCharacters = Ext.extend(Ext.util.Observable, {
                     items: [{
                         xtype: 'dataview',
                         store: charStore,
-                        ref: '../charView',
+                        ref: 'charView',
                         autoHeight: true,
                         multiSelect: true,
                         tpl: new Ext.XTemplate('<tpl for="."><div class="char-item">{char}</div></tpl><div class="x-clear"></div>'),
