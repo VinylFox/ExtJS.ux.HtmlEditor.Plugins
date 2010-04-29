@@ -25,7 +25,7 @@ Ext.ux.form.HtmlEditor.Link = Ext.extend(Ext.util.Observable, {
             iconCls: 'x-edit-createlink',
             handler: function(){
                 var sel = this.cmp.getSelectedText();
-                if (!this.tableWindow) {
+                if (!this.linkWindow) {
                     this.linkWindow = new Ext.Window({
                         title: this.langTitle,
                         closeAction: 'hide',
