@@ -37,17 +37,17 @@ Currently, these are the plugins that have been created for this set:
 
 By extending the MidasCommand class, you can create buttons that execute standard midas commands with one optional argument.
 
-Ext.ux.form.HtmlEditor.H1 = Ext.extend(Ext.ux.form.HtmlEditor.MidasCommand, {
-    midasBtns: ['|', {
-        enableOnSelection: true,
-        cmd: 'formatblock',
-        value: '<h1>',
-        tooltip: {
-            title: '1st Heading'
-        },
-        overflowText: '1st Heading'
-    }]
-}); 
+	Ext.ux.form.HtmlEditor.H1 = Ext.extend(Ext.ux.form.HtmlEditor.MidasCommand, {
+	    midasBtns: ['|', {
+	        enableOnSelection: true,
+	        cmd: 'formatblock',
+	        value: '<h1>',
+	        tooltip: {
+	            title: '1st Heading'
+	        },
+	        overflowText: '1st Heading'
+	    }]
+	}); 
 
 The 'cmd' or command will be one of the standard Midas commands, which can vary by browser. See the lists below for details.
 
