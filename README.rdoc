@@ -4,15 +4,17 @@ This is a set of plugins for the ExtJS HtmlEditor that add more advanced HTML ed
 
 Currently, these are the plugins that have been created for this set:
 
-* WordPaste
-* Divider
+* WordPaste (Removes garbage when pasting text from Word)
+* Divider (divider between buttons, not an HR)
 * Table
-* HR
+* HR (now this is an HR)
 * IndentOutdent
 * SubSuperScript
 * RemoveFormat
-* MidasCommand
+* MidasCommand (Base class to extend midas commands from)
 * SpecialCharacters 
+* HeadingButtons & HeadingMenu (H1, H2, Etc.)
+* Font (Experimental - problems in IE)
 
 = Example Usage
 
@@ -30,6 +32,31 @@ Currently, these are the plugins that have been created for this set:
         	],
         	...
 	}
+
+= Create Your Own Midas Commands
+
+By extending the MidasCommand class, you can create buttons that execute standard midas commands with one optional argument.
+
+Ext.ux.form.HtmlEditor.H1 = Ext.extend(Ext.ux.form.HtmlEditor.MidasCommand, {
+    midasBtns: ['|', {
+        enableOnSelection: true,
+        cmd: 'formatblock',
+        value: '<h1>',
+        tooltip: {
+            title: '1st Heading'
+        },
+        overflowText: '1st Heading'
+    }]
+}); 
+
+The 'cmd' or command will be one of the standard Midas commands, which can vary by browser. See the lists below for details.
+
+* Internet Explorer - http://msdn.microsoft.com/en-us/library/ms533049%28v=VS.85%29.aspx
+* Firefox - http://www.mozilla.org/editor/midas-spec.html
+
+Some of the Midas commands require an argument, or value, which can be defined in the 'value' property.
+
+See the 'Button Icons' section below for adding icons to buttons created from the MidasCommand class.
 
 = Button Icons
 
