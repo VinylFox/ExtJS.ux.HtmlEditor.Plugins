@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>HtmlEditor Plugins Window Example</title>
     <link rel="stylesheet" type="text/css" href="../../../resources/css/ext-all.css" />
-    <link rel="stylesheet" type="text/css" href="../../resources/css/htmleditorplugins.css" />
+    <link rel="stylesheet" type="text/css" href="../htmleditorplugins.css" />
     
     <!-- GC -->
  	<!-- LIBS -->
@@ -26,9 +26,16 @@
     <script src="../../src/Ext.ux.form.HtmlEditor.Link.js"></script>
     <script src="../../src/Ext.ux.form.HtmlEditor.SpecialCharacters.js"></script>
     <script src="../../src/Ext.ux.form.HtmlEditor.UndoRedo.js"></script>
+    <script src="../../src/Ext.ux.form.HtmlEditor.Heading.js"></script>
     <script src="../../src/Ext.ux.form.HtmlEditor.Plugins.js"></script>
+	<!--<script src="http://ext-test/htmleditorplugins/Ext.ux.HtmlEditor.Plugins-all-debug.js"></script>-->
+	<script>
+	    // this is how to override language strings in Midas Buttons
+		if(Ext.ux.form.HtmlEditor.UndoRedo){
+		   Ext.ux.form.HtmlEditor.UndoRedo.prototype.midasBtns[1].tooltip.title = "Oh crap - go back to the way it was!";
+		}
+	</script>
     <script src="form-htmleditor-basic.js"></script>
-
 </head>
 <body>
 

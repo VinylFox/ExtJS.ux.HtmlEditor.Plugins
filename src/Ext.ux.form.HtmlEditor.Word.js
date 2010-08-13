@@ -7,6 +7,7 @@
 Ext.ux.form.HtmlEditor.Word = Ext.extend(Ext.util.Observable, {
     // Word language text
     langTitle: 'Word Paste',
+    langToolTip: 'Cleanse text pasted from Word or other Rich Text applications',
     wordPasteEnabled: true,
     // private
 	curLength: 0,
@@ -107,7 +108,7 @@ Ext.ux.form.HtmlEditor.Word = Ext.extend(Ext.util.Observable, {
             },
             scope: this,
             tooltip: {
-                text: 'Cleanse text pasted from Word or other Rich Text applications'
+                text: this.langToolTip
             },
             overflowText: this.langTitle
         });

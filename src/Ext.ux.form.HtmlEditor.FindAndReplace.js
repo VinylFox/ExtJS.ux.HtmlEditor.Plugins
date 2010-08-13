@@ -41,6 +41,7 @@ Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
                     this.farWindow = new Ext.Window({
                         title: this.langTitle,
                         closeAction: 'hide',
+                        width: 270,
                         items: [{
                             itemId: 'findandreplace',
                             xtype: 'form',
@@ -54,13 +55,13 @@ Ext.ux.form.HtmlEditor.FindAndReplace = Ext.extend(Ext.util.Observable, {
                                 allowBlank: false,
                                 fieldLabel: this.langFind,
                                 name: 'find',
-                                width: 150
+                                width: 145
                             }, {
                                 xtype: 'textfield',
                                 allowBlank: true,
                                 fieldLabel: this.langReplaceWith,
                                 name: 'replace',
-                                width: 150
+                                width: 145
                             }]
                         }],
                         buttons: [{

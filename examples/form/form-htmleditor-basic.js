@@ -20,6 +20,7 @@ Ext.onReady(function(){
             value           : 'The quick brown fox jumps over the fence<br/><img src="training.jpg" width="300" height="200"/>',
             anchor          : '100% 100%',
             xtype           : "htmleditor",
+            //enableFont      : false,
             plugins         : Ext.ux.form.HtmlEditor.plugins()
         }],
         buttons     : [{

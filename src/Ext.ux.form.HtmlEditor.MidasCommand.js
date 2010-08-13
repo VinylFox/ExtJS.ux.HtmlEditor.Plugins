@@ -3,6 +3,8 @@
  * @class Ext.ux.form.HtmlEditor.MidasCommand
  * @extends Ext.util.Observable
  * <p>A base plugin for extending to create standard Midas command buttons.</p>
+ * http://msdn.microsoft.com/en-us/library/ms533049%28v=VS.85%29.aspx
+ * http://www.mozilla.org/editor/midas-spec.html
  */
 Ext.ns('Ext.ux.form.HtmlEditor');
 
@@ -91,13 +93,15 @@ Ext.ux.form.HtmlEditor.MidasCommand = Ext.extend(Ext.util.Observable, {
     },
     // private
     onRender: function(){
-        var midasCmdButton, tb = this.cmp.getToolbar(), btn;
+        var midasCmdButton, tb = this.cmp.getToolbar(), btn, iconCls;
         Ext.each(this.midasBtns, function(b){
             if (Ext.isObject(b)) {
+                iconCls = (b.iconCls) ? b.iconCls : 'x-edit-' + b.cmd;
+                if (b.value) { iconCls = iconCls+'-'+b.value.replace(/[<>\/]/g,''); }
                 midasCmdButton = {
-                    iconCls: 'x-edit-' + b.cmd,
+                    iconCls: iconCls,
                     handler: function(){
-                        this.cmp.relayCmd(b.cmd);
+                        this.cmp.relayCmd(b.cmd, b.value);
                     },
                     scope: this,
                     tooltip: b.tooltip ||

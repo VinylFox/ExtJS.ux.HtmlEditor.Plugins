@@ -44,8 +44,7 @@ Ext.ux.form.HtmlEditor.Link = Ext.extend(Ext.util.Observable, {
                                 fieldLabel: this.langText,
                                 name: 'text',
                                 anchor: '100%',
-                                value: sel.textContent,
-                                disabled: sel.hasHTML
+                                value: '' 
                             }, {
                                 xtype: 'textfield',
                                 fieldLabel: this.langURL,
@@ -86,7 +85,7 @@ Ext.ux.form.HtmlEditor.Link = Ext.extend(Ext.util.Observable, {
                                     }
                                     var html = '<a href="' + url + '" target="' + target + '">' + text + '</a>' + afterSpace;
                                     this.cmp.insertAtCursor(html);
-                                    this.linkWindow.close();
+                                    this.linkWindow.hide();
                                 } else {
                                     if (!frm.findField('url').isValid()) {
                                         frm.findField('url').getEl().frame();
@@ -108,17 +107,19 @@ Ext.ux.form.HtmlEditor.Link = Ext.extend(Ext.util.Observable, {
                             show: {
                                 fn: function(){
                                     var frm = this.linkWindow.getComponent('insert-link').getForm();
-                                    frm.findField('url').focus(true, 50);
+                                    frm.findField('text').setValue(sel.textContent).setDisabled(sel.hasHTML);
+                                    frm.findField('url').reset().focus(true, 50);
                                 },
                                 scope: this,
-                                defer: 200
+                                defer: 350
                             }
                         }
                     });
+                    this.linkWindow.show();
                 } else {
+                    this.linkWindow.show();
                     this.linkWindow.getEl().frame();
                 }
-                this.linkWindow.show();
             },
             scope: this,
             tooltip: this.langTitle

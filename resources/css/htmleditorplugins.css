@@ -9,6 +9,8 @@
     See the notice.txt file in the images folder for possible licence conflicts with these images.
     Some icons may be licenced under the Creative Commons licence - http://creativecommons.org/licenses/by/2.5/
     
+    Some icons have been modified slightly from their source files, in which case the original authors license still applies.
+    
 */
 .x-edit-wordpaste {background: url(../images/default/editor/edit-word-text.png) 0 0 no-repeat !important;}
 .x-edit-table {background: url(../images/default/editor/edit-table.png) 0 0 no-repeat !important;}
@@ -23,6 +25,8 @@
 .x-edit-findandreplace {background: url(../images/default/editor/edit-findandreplace.png) 0 0 no-repeat !important;}
 .x-edit-undo {background: url(../images/default/editor/edit-undo.png) 0 0 no-repeat !important;}
 .x-edit-redo {background: url(../images/default/editor/edit-redo.png) 0 0 no-repeat !important;}
+.x-edit-formatblock-h1 {background: url(../images/default/editor/edit-heading-h1.png) 0 0 no-repeat !important;}
+.x-edit-formatblock-h2 {background: url(../images/default/editor/edit-heading-h2.png) 0 0 no-repeat !important;}
 
 /*
     When using the famfamfam set of icons, the following styles can be used, assuming the famfamfam 

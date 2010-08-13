@@ -26,6 +26,7 @@ Ext.ux.form.HtmlEditor.plugins = function(){
         new Ext.ux.form.HtmlEditor.Table(),
         new Ext.ux.form.HtmlEditor.HR(),
         new Ext.ux.form.HtmlEditor.SpecialCharacters(),
+        new Ext.ux.form.HtmlEditor.HeadingMenu(),
         new Ext.ux.form.HtmlEditor.IndentOutdent(),
         new Ext.ux.form.HtmlEditor.SubSuperScript(),
         new Ext.ux.form.HtmlEditor.RemoveFormat()

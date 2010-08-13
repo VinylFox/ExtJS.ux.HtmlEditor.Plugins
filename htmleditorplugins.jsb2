@@ -25,6 +25,9 @@
             text: 'Ext.ux.form.HtmlEditor.SpecialCharacters.js',
             path: 'src/'
         },{
+            text: 'Ext.ux.form.HtmlEditor.Heading.js',
+            path: 'src/'
+        },{
             text: 'Ext.ux.form.HtmlEditor.Table.js',
             path: 'src/'
         },{

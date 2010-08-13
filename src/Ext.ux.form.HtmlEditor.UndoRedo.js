@@ -5,6 +5,7 @@
  * @extends Ext.ux.form.HtmlEditor.MidasCommand
  * <p>A plugin that creates undo and redo buttons on the HtmlEditor. Incomplete.</p>
  */
+
 Ext.ux.form.HtmlEditor.UndoRedo = Ext.extend(Ext.ux.form.HtmlEditor.MidasCommand, {
     // private
     midasBtns: ['|', {
